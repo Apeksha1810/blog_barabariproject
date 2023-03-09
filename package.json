@@ -1,13 +1,9 @@
 {
-  "name": "blog",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "size": "du -hs ."
   },
   "dependencies": {
     "@astrojs/image": "0.16.0",
@@ -16,11 +12,31 @@
     "@astrojs/preact": "2.1.0",
     "@astrojs/prefetch": "0.2.0",
     "@astrojs/react": "2.1.0",
-    "@astrojs/rss": "2.1.1",
+    "@astrojs/rss": "2.2.0",
     "@astrojs/sitemap": "1.2.0",
     "@astrojs/solid-js": "2.1.0",
     "@astrojs/svelte": "2.1.0",
     "@astrojs/vue": "2.1.0",
-    "astro": "2.0.18"
+    "astro": "2.1.2",
+    "astro-compress": "1.1.35",
+    "astro-i18next": "1.0.0-beta.19",
+    "d3": "7.8.2",
+    "i18next": "^22.4.11",
+    "i18next-fs-backend": "^2.1.1",
+    "katex": "0.16.4",
+    "preact": "^10.13.0",
+    "prismjs": "1.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rehype-slug": "5.1.0",
+    "rehype-toc": "3.0.2",
+    "sass": "1.58.3",
+    "sharp": "0.31.3",
+    "solid-js": "^1.6.12",
+    "svelte": "^3.55.1",
+    "vue": "^3.2.47"
+  },
+  "optionalDependencies": {
+    "eslint": "8.35.0"
   }
 }
