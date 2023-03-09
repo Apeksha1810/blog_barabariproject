@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "deploy": "npx gh-pages -d dist -t true && rm -rf dist",
     "size": "du -hs ."
   },
   "dependencies": {
@@ -34,7 +35,9 @@
     "sharp": "0.31.3",
     "solid-js": "^1.6.12",
     "svelte": "^3.55.1",
-    "vue": "^3.2.47"
+    "typescript": "^4.9.5",
+    "vue": "^3.2.47",
+    "zod": "^3.21.4"
   },
   "optionalDependencies": {
     "eslint": "8.35.0"
