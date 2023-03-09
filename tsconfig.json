@@ -6,6 +6,9 @@
     "jsxImportSource": "react",
     "noImplicitAny": true,
     "paths": {
+      "@": [
+        "src/consts.ts"
+      ],
       "@component:astro/*": [
         "src/components/*"
       ],
