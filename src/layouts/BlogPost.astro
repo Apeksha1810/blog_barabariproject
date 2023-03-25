@@ -2,8 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import FormattedDate from "../components/FormattedDate.astro";
+import FDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -13,39 +12,32 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
+		<link rel="stylesheet" href="https://barabariproject.org/css/atoms.css" />
+		<link rel="stylesheet" href="/assets/css/blog.css" />
 	</head>
 
-	<body>
+	<body xmlns="http://www.w3.org/2000/svg">
 		<Header />
 		<main>
 			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
 				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
-						</div>
+					heroImage && (
+						<img width={720} class="max" height={360} src={heroImage} alt="" />
 					)
 				}
-				<hr />
+				<div class="p10 m10">
+					<FDate date={pubDate} />
+					{
+						updatedDate && (
+							<i style="font-style: italic;">
+								, Last updated: <FDate date={updatedDate} />
+							</i>
+						)
+					}
+				</div>
+				<br />
 				<slot />
 			</article>
 		</main>
-		<Footer />
 	</body>
 </html>

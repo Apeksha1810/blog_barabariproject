@@ -1,17 +1,18 @@
-# Astro Starter Kit: Blog
+<div align="center">
+<img src="https://github.com/Barabari-Project/Anuvaadak/raw/main/docs/assets/logo.svg" height="200px" width="200px"/>
+<div style="font: 100 5rem 'Helvetica Neue', Helvetica, Arial, sans-serif">Barabar Baat</div>
+<div style="font-size:1.25rem;">
 
-```
-npm create astro@latest -- --template blog
-```
+A Barabari Project Blog
+<br />
+<br />
+<img src="https://img.shields.io/github/repo-size/Barabari-Project/blog?color=%23fc3&style=for-the-badge&label=Repo+Size" />
+</div>
+</div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+[![Open in GH Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/barabari-project/blog)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
 
 Features:
 
