@@ -1,34 +1,63 @@
+
+:root {
+	--blue-lt: #57c;
+   --blue: #349;
+   --blue-gt: #116;
+   --yellow-lt: #ff9;
+   --yellow: #fc3;
+   --yellow-gt: #fa0;
+   --color-white: #fff;
+   --color-blue-100: #e8f2ff;
+   --color-slate-500: #a9adc1;
+   /* --color-gray-100: #f7f7f7; */
+   --color-gray-200: #e6e9ee;
+   --color-gray-300: #dde0e4;
+   --color-gray-400: #818890;
+   --color-gray-500: #535661;
+   --color-gray-600: #4b4c53;
+   --color-gray-700: #3a3d4a;
+   --color-gray-800: #2e3039;
+   --color-gray-900: #1f2028;
+   --background-color-main: #262A2E;
+   --blog-card-bg-color:#161819;
+   --shadow: 0 3px 10px -2px rgba(4, 9, 14, 0.5),0 10px 25px -30px rgba(0, 0, 0, 0.5);
+   --blog-card-text-main:#f1f1f1;
+   --blog-card-text:#535661;
+   /* RGBs */
+   --blue-lt-rgb: 85, 119, 204;
+   --blue-rgb: 51, 68, 153;
+   --blue-gt-rgb: 17, 17, 102;
+   --yellow-lt-rgb: 255, 255, 153;
+   --yellow-rgb: 255, 204, 51;
+   --yellow-gt-rgb: 255, 170, 0;
+ }
+ 
+:root.theme-dark {
+	--color-white:black;
+  --background-color-main: #F9F9FF;
+  --blog-card-bg-color:#FFFFFF;
+  --blog-card-text-main: #090C1E;
+  --blog-card-text:#8a8c8d;
+  --shadow: 0 3px 10px -2px rgba(4, 9, 14, 0.1),0 10px 25px -30px rgba(0, 0, 0, 0.1);
+  }
 body {
-	font-size: 17px;
-	font-family: "IBM Plex Sans", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
-		"Helvetica", "Arial", sans-serif;
-	margin: auto;
+	font-family: -apple-system,BlinkMacSystemfont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif;
+	margin: 0;
 	padding: 0;
-	max-width: 80ch;
-	background-color: #fff;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
+	max-width: 1920px;
+	background-color: var(--background-color-main);
 	color: #444;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color: #222;
-}
 
 a {
-	color: #3273dc;
+	font-family: -apple-system,BlinkMacSystemfont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif;
+	font-size: 1.4rem;
+	color: var(--color-gray-100);
 }
 
 nav a {
-	margin-right: 10px;
+	margin-right: 1.8em;
 }
 
 textarea {
@@ -46,11 +75,6 @@ content {
 
 table {
 	width: 100%;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
 }
 
 code {

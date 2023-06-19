@@ -1,0 +1,13 @@
+:root{
+    --card-background-color: #161819;
+    --mail: var(--text-color-main);
+    --body-background-color: #262A2E;
+    --card-background-color: #161819;
+    --text-color-main: #d4d4d4;
+    --text-color-dark: #f1f1f1;
+    --text-color-light: #8a8c8d;
+    --gray-1: #313438;
+    --gray-2: #383c41;
+    --gray-3: #4d4f50;
+    --border-color: #2a2d3b;
+}

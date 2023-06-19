@@ -18,23 +18,25 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	<body xmlns="http://www.w3.org/2000/svg">
 		<Header />
-		<main>
+		<main class="Blog_Post_main">
 			<article>
-				{
-					heroImage && (
-						<img width={720} class="max" height={360} src={heroImage} alt="" />
-					)
-				}
-				<div class="p10 m10">
-					<FDate date={pubDate} />
-					{
-						updatedDate && (
-							<i style="font-style: italic;">
-								, Last updated: <FDate date={updatedDate} />
-							</i>
-						)
-					}
+				<div class="Blog_Head">
+					<h1>{title}</h1>
+					<div class="p10 m10">
+						<FDate date={pubDate} />
+						{
+							updatedDate && (
+								<i style="font-style: italic;">
+									, Last updated: <FDate date={updatedDate} />
+								</i>
+							)
+						}
+					</div>
+					<div class="Hero_img">
+						<img src={heroImage} alt="" />
+					</div>
 				</div>
+				
 				<br />
 				<slot />
 			</article>
