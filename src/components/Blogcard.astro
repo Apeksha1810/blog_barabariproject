@@ -1,0 +1,40 @@
+---
+import 'public/assets/css/blog.css';
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+ type Props = CollectionEntry<"blog">["data"];
+ const {post} = Astro.props;
+---
+<div class="Post_card">
+    <div class="Hero_img">
+        <img src={post.data.heroImage} alt="" />
+    </div>
+    <div class="post_info">
+        <h2 class="post_title"><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h2>
+        <h1 class="post_desciption">
+            <p>{post.data.description}</p>
+        </h1>
+        <div class="post_date">
+            <FormattedDate date={post.data.pubDate} />
+        </div>
+    </div>
+</div>
+<style>
+ /* h2{
+    color: #f1f1f1;
+ }  */
+ h1{
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+    height: auto;
+    font-size: 1.2rem;
+    color:  #8a8c8d;
+ }  
+a{
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 2.25rem;
+}
+</style>
+

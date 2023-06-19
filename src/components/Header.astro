@@ -1,41 +1,27 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header>
-	<h1 style="vertical-align: middle;;">
-		<svg
-			font-family="Helvetica"
-			font-size="56"
-			font-weight="500"
-			viewBox="0 0 128 128"
-			text-anchor="middle"
-			style="position: relative; top: 2px;"
-			height="28"
-			width="28"
-		>
-			<rect fill="#000" x="0" y="0" width="128" height="128"></rect>
-			<rect fill="#fff" x="0" y="0" width="126" height="126"></rect>
-			<text x="25%" y="30%" alignment-baseline="middle" fill="#000">P</text>
-			<text x="75%" y="30%" alignment-baseline="middle" fill="#000">4</text>
-			<text x="25%" y="70%" alignment-baseline="middle" fill="#000">=</text>
-			<text x="75%" y="70%" alignment-baseline="middle" fill="#000">⬡</text>
-		</svg>
-		{SITE_TITLE}
-	</h1>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
 		<HeaderLink href="https://barabariproject.org" target="_blank">
 			Home
 		</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
 	</nav>
+	<div class="toggle_btn">
+		<ThemeToggle />
+	</div>
+
 </header>
+
 <style>
 	header {
-		margin: 0em 0 2em;
+	margin: 2em 10em;
+	justify-content:center;
+    display: flex;
+	align-items: center;
 	}
 	h1 {
 		margin: 0.5em 0;

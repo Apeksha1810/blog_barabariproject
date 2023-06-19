@@ -1,13 +1,14 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
+import type { CollectionEntry } from "astro:content";
 import Header from "../../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-
-const posts = (await getCollection("blog")).sort(
+import Blogcard from "@component:astro/Blogcard.astro";
+ const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+ );
+ type Props = CollectionEntry<"blog">["data"];
 ---
 
 <!DOCTYPE html>
@@ -16,40 +17,27 @@ const posts = (await getCollection("blog")).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<link rel="stylesheet" href="https://barabariproject.org/css/atoms.css" />
 		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
+			main{
+			margin: 0px 2em;	
 			}
-			ul li {
+			section{
 				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
 			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-			body {
-				font-weight: 400;
-			}
+
 		</style>
 	</head>
 	<body xmlns="http://www.w3.org/2000/svg">
 		<Header />
 		<main>
 			<section>
-				<ul>
 					{
 						posts.map((post) => (
-							<li>
-								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-							</li>
+							<Blogcard {post}/>
 						))
 					}
-				</ul>
 			</section>
 		</main>
 	</body>

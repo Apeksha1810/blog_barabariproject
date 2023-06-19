@@ -8,26 +8,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@@";
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="stylesheet" href="/assets/css/blog.css" />
 	</head>
 	<body xmlns="http://www.w3.org/2000/svg">
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>
-					Edit the site header items in <code>src/components/Header.astro</code>
-				</li>
-				<li>
-					Check out the included blog posts in <code>src/pages/blog/</code>
-				</li>
-				<li>
-					Customize the blog post page layout in <code
-						>src/layouts/BlogPost.astro</code
-					>
-				</li>
-			</ul>
+			<section class="Index_section">
+				<div class="Site_description">
+					<h1>{SITE_TITLE}</h1>
+				<p>{SITE_DESCRIPTION}</p>
+				</div>
+				<div class="Site_logo">
+					<p></p>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
